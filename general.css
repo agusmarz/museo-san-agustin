@@ -1,0 +1,303 @@
+@font-face {
+	font-family: Museo-1;
+	src: url(fonts/MuseoSans-100.otf);
+}
+
+@font-face {
+	font-family: Museo-3;
+	src: url(fonts/MuseoSans-300.otf);
+}
+
+@font-face {
+	font-family: Museo-5;
+	src: url(fonts/MuseoSans_500.otf);
+}
+
+@font-face {
+	font-family: Museo-7;
+	src: url(fonts/MuseoSans_700.otf);
+}
+
+@font-face {
+	font-family: Museo300;
+	src: url(fonts/Museo300-Regular.otf);
+}
+
+@font-face {
+	font-family: Museo700;
+	src: url(fonts/Museo700-Regular.otf);
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-decoration:none ;
+	font-family: Museo-1;
+}
+
+body{
+	background-color: #F1EFF9;
+	position: relative;
+	min-height: 100vh;
+	padding-top: 75px;
+	padding-bottom: 400px;
+}
+
+h1,
+h2{
+	font-family: Museo700;
+}
+
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #B98C65;
+	--webkit-box-shadow: 0px 34px 113px -24px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 34px 113px -24px rgba(0,0,0,0.75);
+	box-shadow: 0px 34px 113px -24px rgba(0,0,0,0.75);
+	padding: 0px 7%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 999 ;
+}
+
+header .logo{
+	margin-left: 3vw;
+	margin-top: 1vh;
+}
+
+header .logo-img{
+	width: 12vw;
+}
+@media (max-width: 1625px) {
+	header .logo-img{
+		width: 16vw;
+	}
+}
+@media (max-width: 1060px) {
+	header .logo-img{
+		width: 20vw;
+	}
+}
+header .navbar ul{
+	list-style: none;
+}
+
+header .navbar ul li{
+	position: relative;
+	float: left;
+}
+
+header .navbar ul li a{
+	font-size: 20px;
+	padding: 20px;
+	color: #0D0804 ;
+	display: block;
+	font-family: Museo-3;
+	padding: 2em 1em;
+}
+
+header .navbar ul li a:hover{
+	background-color: #0D0804;
+	color: #F1EEE9;
+	transition: all .4s ease;
+}
+
+header .navbar ul li ul{
+	position: absolute;
+	left: 0%;
+	width: 200px;
+	background-color: #F1EEE9;
+	display: none;
+}
+
+header .navbar ul li ul li{
+	width: 100%;
+	border-top: 1px solid #0D0804;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+	display: initial;
+}
+
+#menu-bar{
+	display: none;
+}
+
+header label{
+	font-size: 20px;
+	color: black;
+	cursor: pointer;
+	display: none;
+}
+
+footer{
+	position: absolute;
+	bottom: 0; left: 0; right: 0;
+	background-color: #0D0804;
+	height: 300px;
+	width: 100%;
+	padding-top: 40px;
+	color: #F1EFF0;
+}
+
+.footer-content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.footer-content h3{
+	font-size: 1.8rem;
+	font-family: Museo-3;
+	text-transform: capitalize;
+	line-height: 3rem;
+}
+
+.footer-content p{
+	max-width: 500px;
+	margin: 10px auto;
+	line-height: 28px;
+	font-size: 14px;
+}
+
+.redes{
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 1rem 0 3rem 0;
+}
+
+.redes li{
+	margin: 0 10px;
+}
+
+.redes a i{
+	font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.redes a{
+	text-decoration: none;
+	color: #F1EFF0;
+}
+
+.redes a:hover i{
+    color: #B98C65;
+}
+
+.footer-bottom{
+	background-color: #0D0804;
+	width: 100%;
+	padding: 10px 50px;
+	text-align: center;
+}
+
+.footer-bottom p{
+	font-size: 14px;
+	word-spacing: 2px;
+	text-transform: capitalize;
+}
+
+.footer-bottom span{
+	font-family: Museo-3;
+	color: #B98C65;
+	text-transform: capitalize;
+}
+
+
+@media(max-width:991px){
+
+	header{
+		padding: 20px;
+	}
+
+	header label{
+		display: initial;
+	}
+
+	header .navbar{
+		position: absolute;
+		top: 100%; left: 0; right: 0;
+		background-color: aliceblue;
+		border-top: 1px solid black;
+		display: none;
+	}
+
+	header .navbar ul li{
+		width: 100%;
+	}
+
+	header .navbar ul li ul{
+		position: relative;
+		width: 100%;
+	}
+
+	header .navbar ul li ul li{
+		background-color: aliceblue;
+	}
+
+	#menu-bar:checked ~ .navbar{
+		display: initial;
+	}
+}
+
+@media only screen 
+and (device-width < 500px) 
+and (device-height < 1000px) {
+	
+	header .logo-img{
+		width: 30vw;
+	}
+
+	header .navbar ul li a{
+		font-size: 3em;
+	}
+
+	header label{
+		font-size: 3em
+	}
+	
+	.footer-bottom p{
+		font-size: 1.8em;
+		}
+	
+	.footer-bottom{
+	padding-bottom: 1.5em;
+	}
+
+	.redes a i{
+		font-size: 2.4em;
+		margin-top: 0.4em;}
+
+	.footer-content h3{
+		font-size: 3em
+	}
+	
+	.footer-content p{
+		font-size: 1.7em;
+		margin-top: 1em;
+	}
+}
+
+p{
+	line-height: 1.4em;
+	font-size: 1.2em;
+}
+
+.icon{
+	height: 3em;
+	color: #f3f3f3;
+	fill: #f3f3f3;
+}
